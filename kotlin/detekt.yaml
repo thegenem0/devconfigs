@@ -1,0 +1,25 @@
+naming:
+  FunctionNaming:
+    active: true
+    excludes: [
+      '**/test/**',
+      '**/testIntegration/**'
+    ]
+    functionPattern: '[a-zA-Z][a-zA-Z0-9]*'
+
+formatting:
+  Indentation:
+    active: false
+  Wrapping:
+    active: false
+  NoBlankLineBeforeRbrace:
+    active: false
+
+complexity:
+  LongMethod:
+    active: true
+    threshold: 120
+
+style:
+  MagicNumber:
+    active: false

@@ -1,0 +1,29 @@
+{
+  "name": "vite-react-ts",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite",
+    "build:local": "tsc && vite build",
+    "build:production": "tsc && vite build --mode production",
+    "preview": "vite preview",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "format": "prettier --write .",
+    "lint": "tsc --noEmit && eslint src --max-warnings=0",
+    "types": "tsc --project tsconfig.json --noEmit",
+    "prepare": "husky install"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "lint-staged": {
+    "src/*": "prettier -uw --cache",
+    "*.{ts,tsx}": "eslint --cache --fix --max-warnings=0",
+    "*.{json,md,yml}": "prettier --write"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}
